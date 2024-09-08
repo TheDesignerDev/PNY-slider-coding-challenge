@@ -35,7 +35,7 @@ function App() {
   }
 
   /**
-   * Backtrack testimonial index  
+   * Backtrack testimonial index 
    * if not possible go to last one
    */
   const goPrev = () => {
