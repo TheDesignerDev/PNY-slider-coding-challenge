@@ -8,13 +8,15 @@ import rightArrow from './images/icon-next.svg'
 const testimonials = [
   {
     image: img1, 
-    text: '"Ive been interested in coding for a while but never taken the jump, until now. I couldnt recommend this course enough. Im now in the job of my dreams and so excited about the future."',
+    text: '"I\'ve been interested in coding for a while but never taken the jump, until now. I couldn\'t recommend this course enough. I\'m now in the job of my dreams and so excited about the future."',
     author: 'Tanya Sinclair',
     role: 'UX Engineer'
   }, 
   {
     image: img2,
-    text: '"Ive been interested in coding for a while but never taken the jump, until now. I couldnt recommend this course enough. Im now in the job of my dreams and so excited about the future."'
+    text: '"If you want to lay the best foundation possible l\'d recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer."',
+    author: 'John Tarkpor',
+    role: 'Junior Front-end Developer'
   }
 ]
 
@@ -49,17 +51,19 @@ function App() {
     <div className="App">
       <div className='left-bg'>
         <div className='bottom-left-bg' />
-        <p>{text}</p>
-        <p>{author} <span>{role}</span></p>
+        <div className="text-container">
+        <p className='body-text'>{text}</p>
+        <p className='author-text'>{author} <span>{role}</span></p>
+        </div>
       </div>
       <div className='right-bg'>
         <div className='person-img'>
             <img src={image} />
             <div className='arrow-container'>
-              <button onClick={goPrev}>
+              <button className="left-button" onClick={goPrev}>
                 <img src={leftArrow} />
               </button>
-              <button onClick={goNext}>
+              <button className="right-button" onClick={goNext}>
                 <img src={rightArrow} />
               </button>
             </div>

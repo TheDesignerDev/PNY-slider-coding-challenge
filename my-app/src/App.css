@@ -1,7 +1,6 @@
 .App {
   display: flex;
-  min-height: 100vh;
-  width: 100%;
+  flex-direction: column-reverse;
 }
 
 .left-bg {
@@ -13,7 +12,127 @@
   flex: 1;
   background-image: url('./images/pattern-quotes.svg');
   background-repeat: no-repeat;
+  background-size: 70px;
+  background-position-x: 50%;
+  background-position-y: 10%;
+}
+
+.bottom-left-bg {
+  height: 50px;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url('./images/pattern-curve.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.right-bg {
+  flex: 1;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/pattern-bg.svg');
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+  margin: 0;
+}
+
+.person-img {
+  position: relative;
+}
+
+.person-img img {
+  width: 250px;
+  height: 250px;
+}
+
+.arrow-container {
+  display: flex;
+  position: absolute;
+  bottom: -14px;
+  left: 35%;
+  width: 80px;
+  height: 40px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  border-radius: 30px;
+}
+
+.arrow-container button {
+  flex: 1;
+}
+
+.arrow-container img {
+  width: 12px;
+  height: 12px;
+}
+
+.left-button {
+border-radius: 30px 0 0 30px;
+background-color: white;
+border:none;
+}
+
+.right-button {
+  border-radius: 0 30px 30px 0;
+  background-color: white;
+  border:none; 
+  }
+ 
+
+.body-text {
+  font-size: 1.2rem;
+  text-align: center;
+color:hsl(240, 38%, 20%);
+font-weight: 300;
+}
+
+.author-text {
+  font-size: 1rem;
+  text-align: center;
+  color:hsl(240, 38%, 20%);
+  font-weight: 700;
+}
+
+.author-text span{
+  font-size: 1rem;
+  color:hsl(240, 18%, 77%);
+  font-weight: 500;
+}
+
+.text-container p{
+  display:flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+.App {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: row;
+}
+
+.left-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+  flex: 1;
+  background-image: url('./images/pattern-quotes.svg');
+  background-repeat: no-repeat;
+  background-size: 120px;
+  background-position-x: 30%;
+  background-position-y: 30%;
 }
 
 .bottom-left-bg {
@@ -34,23 +153,63 @@
   background-image: url('./images/pattern-bg.svg');
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: -25%;
+  border:1px solid red;
 }
 
 .person-img {
   position: relative;
-  border: 1px solid purple;
 }
 
-.arrow-container {
-  display: flex;
-  position: absolute;
-  bottom: -30px;
-  left: 50px;
-  border: 1px solid red;
-  width: 100px;
-  height: 60px;
+.person-img img {
+  width: auto;
+  height: auto;
 }
+
 
 .arrow-container button {
   flex: 1;
 }
+
+.left-button {
+border-radius: 30px 0 0 30px;
+background-color: white;
+border:none;
+}
+
+.right-button {
+  border-radius: 0 30px 30px 0;
+  background-color: white;
+  border:none; 
+  }
+ 
+
+.body-text {
+font-size: 2rem;
+text-align: start;
+}
+
+.author-text {
+  font-size: 1.2rem;
+  } 
+
+.author-text span{
+font-size: 1.2rem;
+margin-left:6px;
+}
+
+.text-container p{
+  display: flex;
+  flex-direction: row;
+}
+.text-container{
+  z-index:1;
+}
+
+}
+
+
+
+
+
+
